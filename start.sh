@@ -22,8 +22,4 @@ $VIRTUALENV/bin/pip install -r requirements.txt
 
 # Run a glorious Python 3 server
 $VIRTUALENV/bin/python3 app.py
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
+
