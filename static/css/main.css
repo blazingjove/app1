@@ -38,6 +38,8 @@ input[type=date] {
   width: 350;
   height: 12px;
   background-color: #5b4b8a2c;
+
+  text-align: right;
   justify-content: right;
   margin: -15px auto 40px auto;
   border-radius: 100px;
