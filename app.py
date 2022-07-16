@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from datetime import date
+import logging
 from age import age
 from catCalc import catCalc
 from dogCalc import dogCalc
@@ -24,19 +25,38 @@ def download():
     dobSplit = dob.split("-")
     #dobSplitFormat = (int(dobSplit[0]),int(dobSplit[1]), int(dobSplit[2]))
     realDob = age(date(int(dobSplit[0]),int(dobSplit[1]), int(dobSplit[2])))
-    if petType == "cat":
-        petAge = catCalc(realDob)
+    if realDob > 15:
+      return render_template("/generate.html");
+    elif petType == "cat":
+        petAge = catCalc(realDob);
+        doggie = "cat";
+    elif petType == "small":
+        petAge = dogCalc(realDob,petType)
+        doggie = "dog";
+        petType = "small dog";
+    elif petType == "medium":
+        petAge = dogCalc(realDob,petType)
+        doggie = "dog";
+        petType = "medium dog"
+    elif petType == "large":
+        petAge = dogCalc(realDob,petType)
+        doggie = "dog";
+        petType = "large dog"
     else:
-        petAge = dogCalc(realDob)
-    
+        petAge = dogCalc(realDob,petType)
+        doggie = "dog";
+        petType = "giant dog" 
+        
     pet.append(name)
     pet.append(dob)
     pet.append(petType)
     pet.append(realDob)
     pet.append(petAge)
+    pet.append(doggie)
     #pet.append(dobSplitFormat)
 
     return render_template("download.html",pet = pet)
 
-
+if __name__ =="__main__":
+  app.run()
  

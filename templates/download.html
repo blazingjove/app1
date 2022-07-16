@@ -2,11 +2,13 @@
 
 {% block body %}
 <div class="box">
-  <h2>{{pet[0]}}'s birthday is {{pet[1]}}</h2>
-  <br>
+  <h2 style="text-align: center;">{{pet[0]}}'s Data</h2>
+    <br>
   <p>{{pet[0]}} is a {{pet[2]}}...and {{pet[3]}} years old</p>
-  <p>{{pet[0]}} is {{pet[4]}} years old in {{pet[2]}} years</p>
-  <br>
-  <p>To dowload calender reminders of {{pet[0]}}'s future birthdays click the link below</p>
+  <p>{{pet[0]}} is {{pet[4]}} years old in {{pet[5]}} years</p>
+    <br>
+  {{pet[0]}}'s next {{pet[5]}} birthday (PLACEHOLDER LINK)
+      <br><br>
+  <p style="text-align: center;">Made by Marco Alvarez</p>
 </div>
 {% endblock %}

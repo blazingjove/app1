@@ -6,38 +6,48 @@
 <div class="box">
 
   <div class="title">
-    <h3>Pet Age Generator</h3>
+    <h3>Pet Age Calculator</h3>
   <hr/>
 </div>
   <form action="/download" method="post" id="signup">
     <!--pet parameters-->
-    <label>Species: </label>
-    <input type="radio" name="petType" value="dog" required>
-    <label for="dog">Dog</label>
-    <input type="radio" name="petType" value="cat" required>
-    <label for="cat">Cat</label>
-    <br><br>
+    <label for="species">Species: </label>
+    <select name="petType" id="petType">
+      <option value="small">Small Dog (20 lbs and under)</option>
+      <option value="medium">Medium Dog (21-50 lbs)</option>
+      <option value="large">Large Dog (51-100 lbs)</option>
+      <option value="giant">Giant Dog (101+ lbs)</option>
+      <option value="cat">Cat</option>
+    </select>
     
-    <div class="input-data">
+    
+    <br><br>
+    <p style="display:inline;">Pet's Name:</p>
+    <div class="input-data" style="display:inline;">
       <input type="text" name="petName" id="petName" placeholder="" required>
       <div class="underline"></div>
       <label >Pet's Name:</label>
     </div>
-    <br>
+    <br><br>
 
     <label>Pet's Date of Birth: </label>
-    <br>
-    <input type='date' name="dob" placeholder="">
-    <br>
-    <br>
-    <label>How far ahead do you want to calculate your pets birthday? </label>
-    <br>
-    <input type='date' name="future"  placeholder="">
-
+    
+    <input type="date" name="dob" placeholder="">
     <br><br>
+    <!--
+    <br><br>
+    <label>How far ahead do you want to calculate your pets birthday? fff </label>
+    <br>
+    <input type="date" name="future"  placeholder="">
+    -->
+    <br>
     <input type="submit" value="submit" class="continue">
     <br>
 
-  </form> 
+  </form>
+      <br><br>
+      <p style="text-align: center;">
+        Made by Marco Alvarez 
+      </p>
 </div>
 {% endblock %}
