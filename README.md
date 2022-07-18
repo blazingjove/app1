@@ -96,6 +96,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * Python
 * HTML
 * CSS
+* Shell
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -149,10 +150,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+- [x] Dynamically generate webpage with user imput
+- [ ] display pets next birthday 
+- [ ] add .ics file with pets next birthday
 
 See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
 
